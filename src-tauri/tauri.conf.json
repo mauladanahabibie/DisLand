@@ -1,0 +1,46 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "DisplaySet",
+  "version": "0.1.0",
+  "identifier": "com.displayset.app",
+  "build": {
+    "frontendDist": "../dist",
+    "devUrl": "http://localhost:1420",
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "DisplaySet — Hyprland Display Manager",
+        "width": 1280,
+        "height": 820,
+        "minWidth": 980,
+        "minHeight": 640,
+        "decorations": false,
+        "transparent": false,
+        "resizable": true,
+        "center": true,
+        "shadow": false
+      }
+    ],
+    "security": {
+      "csp": null,
+      "capabilities": ["default", "fs-access"]
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["deb", "rpm", "app"],
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "category": "Utility"
+  },
+  "plugins": {}
+}
